@@ -19,9 +19,9 @@ const CharacterList = ({ characters }) => {
 
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
-    _id: PropTypes.number.isRequired,
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    photoUrl: PropTypes.string.isRequired
+    photoUrl: PropTypes.string
   })).isRequired
 };
 

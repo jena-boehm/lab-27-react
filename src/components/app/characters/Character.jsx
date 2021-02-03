@@ -13,8 +13,8 @@ const Character = ({ name, photoUrl, _id }) => (
 
 Character.propTypes = {
   name: PropTypes.string.isRequired,
-  photoUrl: PropTypes.string.isRequired,
-  _id: PropTypes.number.isRequired
+  photoUrl: PropTypes.string,
+  _id: PropTypes.string.isRequired
 };
 
 export default Character;

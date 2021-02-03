@@ -1,22 +1,24 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import { getCharacters } from '../../../services/avatarApi';
+import { getCharacterById } from '../../../services/avatarApi';
+import Detail from './Detail';
 
 export default class DetailPage extends Component {
   state = {
-    characters: []
+    characters: {}
   }
 
   componentDidMount() {
-    getCharacters()
+    getCharacterById(this.props.match.params.id)
       .then(characters => this.setState({ characters }));
   }
 
   render() {
-    // const { characters } = this.state;
+    const { characters } = this.state;
 
     return (
       <div>
-        Hello   
+        <Detail {...characters} />
       </div>
     );
   }
